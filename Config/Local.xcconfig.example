@@ -1,0 +1,10 @@
+// Optional. Copy to Config/Local.xcconfig (git-ignored) to sign with your Apple Development identity,
+// so macOS keeps the Accessibility permission across rebuilds.
+// Team ID: https://developer.apple.com/account > Membership details, or the OU field of your certificate.
+// Your Apple account must also be added in Xcode > Settings > Accounts.
+CODE_SIGN_STYLE = Automatic
+CODE_SIGN_IDENTITY = Apple Development
+DEVELOPMENT_TEAM = XXXXXXXXXX
+
+// Use your own bundle identifier if automatic signing complains that this one is not available.
+// PRODUCT_BUNDLE_IDENTIFIER = com.example.quick-prompt

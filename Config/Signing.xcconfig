@@ -1,0 +1,8 @@
+// Default: ad hoc signing. macOS then asks for the Accessibility permission again after every rebuild.
+// For a stable identity, copy Local.xcconfig.example to Local.xcconfig and set your Team ID.
+PRODUCT_BUNDLE_IDENTIFIER = com.hectormiko.quick-prompt
+CODE_SIGN_STYLE = Manual
+CODE_SIGN_IDENTITY = -
+DEVELOPMENT_TEAM =
+
+#include? "Local.xcconfig"

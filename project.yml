@@ -1,0 +1,41 @@
+name: quick-prompt
+options:
+  bundleIdPrefix: com.hectormiko
+  deploymentTarget:
+    macOS: "14.0"
+  createIntermediateGroups: true
+packages:
+  QuickPromptCore:
+    path: Packages/QuickPromptCore
+settings:
+  base:
+    SWIFT_VERSION: "6.0"
+    MACOSX_DEPLOYMENT_TARGET: "14.0"
+targets:
+  quick-prompt:
+    type: application
+    platform: macOS
+    sources:
+      - path: App
+    dependencies:
+      - package: QuickPromptCore
+    configFiles:
+      Debug: Config/Signing.xcconfig
+      Release: Config/Signing.xcconfig
+    info:
+      path: App/Info.plist
+      properties:
+        CFBundleName: quick-prompt
+        CFBundleDisplayName: quick-prompt
+        CFBundleShortVersionString: "0.1.0"
+        CFBundleVersion: "1"
+        LSUIElement: true
+        LSApplicationCategoryType: public.app-category.productivity
+    settings:
+      base:
+        PRODUCT_NAME: quick-prompt
+        PRODUCT_MODULE_NAME: QuickPrompt
+        GENERATE_INFOPLIST_FILE: NO
+        ENABLE_HARDENED_RUNTIME: NO
+        ENABLE_APP_SANDBOX: NO
+        COMBINE_HIDPI_IMAGES: YES
