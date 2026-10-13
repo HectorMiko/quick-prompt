@@ -1,5 +1,5 @@
 APP := quick-prompt
-BUILD_DIR := build
+BUILD_DIR := build.noindex
 APP_PATH := $(BUILD_DIR)/Build/Products/Release/$(APP).app
 INSTALL_DIR := $(HOME)/Applications
 SUBSYSTEM := com.hectormiko.quick-prompt
